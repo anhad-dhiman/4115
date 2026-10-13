@@ -5,7 +5,7 @@ Team website project (Fall 2026). A fictional cricket franchise, the **Vancouver
 | Branch | Design |
 | --- | --- |
 | `corporate-grid` | **Design 1** — conventional corporate layout: top nav, hero banner, uniform card grids, tabs and data tables |
-| `magazine-spread` | **Design 2** — editorial sports-magazine layout (coming next) |
+| `main` | **Design 2** — editorial sports-magazine layout (Vercel production) |
 
 Stack: React (JavaScript) + Vite + Tailwind CSS v4 + React Router.
 
@@ -19,7 +19,7 @@ npm run build      # production build in dist/
 
 ## Deploy (Vercel)
 
-Import the repo in Vercel, pick the `corporate-grid` branch as the production branch (framework preset: Vite). `vercel.json` already rewrites every route to `index.html` so deep links like `/season/stats` work. For Netlify, `public/_redirects` does the same job.
+Import the repo in Vercel, the `corporate-grid` branch deploys as a branch preview URL while `main` (magazine) is production (framework preset: Vite). `vercel.json` already rewrites every route to `index.html` so deep links like `/season/stats` work. For Netlify, `public/_redirects` does the same job.
 
 ## Site map (3 levels, 14 pages)
 
