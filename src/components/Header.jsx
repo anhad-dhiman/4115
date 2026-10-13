@@ -14,7 +14,9 @@ export default function Header() {
   const { pathname } = useLocation()
 
   // Close the mobile menu whenever the route changes.
-  useEffect(() => setOpen(false), [pathname])
+  useEffect(() => {
+    setOpen(false)
+  }, [pathname])
 
   return (
     <header className="sticky top-0 z-40 bg-navy shadow-md">
