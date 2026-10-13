@@ -1,0 +1,100 @@
+// Current squad. Season stats are fictional placeholders for the prototype.
+// role: 'Batter' | 'Bowler' | 'All-rounder' | 'Wicket-keeper'
+
+export const players = [
+  { id: 'jos-buttler', name: 'Jos Buttler', number: 63, country: 'England', role: 'Wicket-keeper', captain: true,
+    batting: 'Right-hand bat', bowling: '—', stats: { matches: 11, runs: 412, avg: 41.2, sr: 158.4, wickets: 0, econ: null } },
+  { id: 'shubman-gill', name: 'Shubman Gill', number: 77, country: 'India', role: 'Batter', viceCaptain: true,
+    batting: 'Right-hand bat', bowling: 'Right-arm off break', stats: { matches: 11, runs: 455, avg: 45.5, sr: 146.7, wickets: 0, econ: null } },
+  { id: 'travis-head', name: 'Travis Head', number: 62, country: 'Australia', role: 'Batter',
+    batting: 'Left-hand bat', bowling: 'Right-arm off break', stats: { matches: 11, runs: 389, avg: 35.4, sr: 171.3, wickets: 2, econ: 8.9 } },
+  { id: 'harry-brook', name: 'Harry Brook', number: 88, country: 'England', role: 'Batter',
+    batting: 'Right-hand bat', bowling: 'Right-arm medium', stats: { matches: 10, runs: 301, avg: 37.6, sr: 152.0, wickets: 0, econ: null } },
+  { id: 'aaron-johnson', name: 'Aaron Johnson', number: 21, country: 'Canada', role: 'Batter',
+    batting: 'Right-hand bat', bowling: '—', stats: { matches: 9, runs: 246, avg: 27.3, sr: 149.1, wickets: 0, econ: null } },
+  { id: 'nicholas-kirton', name: 'Nicholas Kirton', number: 9, country: 'Canada', role: 'Batter',
+    batting: 'Left-hand bat', bowling: '—', stats: { matches: 8, runs: 188, avg: 26.9, sr: 131.5, wickets: 0, econ: null } },
+  { id: 'heinrich-klaasen', name: 'Heinrich Klaasen', number: 45, country: 'South Africa', role: 'Wicket-keeper',
+    batting: 'Right-hand bat', bowling: '—', stats: { matches: 11, runs: 367, avg: 40.8, sr: 176.4, wickets: 0, econ: null } },
+  { id: 'glenn-maxwell', name: 'Glenn Maxwell', number: 32, country: 'Australia', role: 'All-rounder',
+    batting: 'Right-hand bat', bowling: 'Right-arm off break', stats: { matches: 11, runs: 214, avg: 23.8, sr: 168.5, wickets: 9, econ: 7.6 } },
+  { id: 'hardik-pandya', name: 'Hardik Pandya', number: 33, country: 'India', role: 'All-rounder',
+    batting: 'Right-hand bat', bowling: 'Right-arm fast-medium', stats: { matches: 10, runs: 198, avg: 28.3, sr: 155.9, wickets: 11, econ: 8.4 } },
+  { id: 'marco-jansen', name: 'Marco Jansen', number: 70, country: 'South Africa', role: 'All-rounder',
+    batting: 'Left-hand bat', bowling: 'Left-arm fast', stats: { matches: 11, runs: 121, avg: 20.2, sr: 140.7, wickets: 14, econ: 7.9 } },
+  { id: 'saad-bin-zafar', name: 'Saad Bin Zafar', number: 10, country: 'Canada', role: 'All-rounder',
+    batting: 'Left-hand bat', bowling: 'Slow left-arm orthodox', stats: { matches: 11, runs: 96, avg: 16.0, sr: 124.7, wickets: 12, econ: 6.8 } },
+  { id: 'rashid-khan', name: 'Rashid Khan', number: 19, country: 'Afghanistan', role: 'Bowler',
+    batting: 'Right-hand bat', bowling: 'Right-arm leg break', stats: { matches: 11, runs: 74, avg: 14.8, sr: 162.2, wickets: 19, econ: 6.1 } },
+  { id: 'jasprit-bumrah', name: 'Jasprit Bumrah', number: 93, country: 'India', role: 'Bowler',
+    batting: 'Right-hand bat', bowling: 'Right-arm fast', stats: { matches: 10, runs: 12, avg: 6.0, sr: 92.3, wickets: 18, econ: 6.3 } },
+  { id: 'trent-boult', name: 'Trent Boult', number: 18, country: 'New Zealand', role: 'Bowler',
+    batting: 'Right-hand bat', bowling: 'Left-arm fast-medium', stats: { matches: 11, runs: 18, avg: 9.0, sr: 105.9, wickets: 15, econ: 7.4 } },
+  { id: 'kagiso-rabada', name: 'Kagiso Rabada', number: 25, country: 'South Africa', role: 'Bowler',
+    batting: 'Left-hand bat', bowling: 'Right-arm fast', stats: { matches: 9, runs: 22, avg: 11.0, sr: 110.0, wickets: 13, econ: 8.1 } },
+  { id: 'kaleem-sana', name: 'Kaleem Sana', number: 7, country: 'Canada', role: 'Bowler',
+    batting: 'Right-hand bat', bowling: 'Left-arm fast-medium', stats: { matches: 7, runs: 9, avg: 4.5, sr: 81.8, wickets: 8, econ: 7.7 } },
+]
+
+export const roles = ['All', 'Batter', 'Wicket-keeper', 'All-rounder', 'Bowler']
+
+export const getPlayer = (id) => players.find((p) => p.id === id)
+
+// Previous seasons (Squad > Previous Squads).
+export const previousSquads = [
+  {
+    season: '2025',
+    finish: 'Runners-up',
+    captain: 'Faf du Plessis',
+    coach: 'Ricky Ponting',
+    players: [
+      { name: 'Faf du Plessis', role: 'Batter', country: 'South Africa' },
+      { name: 'David Warner', role: 'Batter', country: 'Australia' },
+      { name: 'Jos Buttler', role: 'Wicket-keeper', country: 'England' },
+      { name: 'Shubman Gill', role: 'Batter', country: 'India' },
+      { name: 'Andre Russell', role: 'All-rounder', country: 'West Indies' },
+      { name: 'Glenn Maxwell', role: 'All-rounder', country: 'Australia' },
+      { name: 'Saad Bin Zafar', role: 'All-rounder', country: 'Canada' },
+      { name: 'Rashid Khan', role: 'Bowler', country: 'Afghanistan' },
+      { name: 'Trent Boult', role: 'Bowler', country: 'New Zealand' },
+      { name: 'Anrich Nortje', role: 'Bowler', country: 'South Africa' },
+      { name: 'Dilon Heyliger', role: 'Bowler', country: 'Canada' },
+    ],
+  },
+  {
+    season: '2024',
+    finish: 'Champions',
+    captain: 'Kieron Pollard',
+    coach: 'Ricky Ponting',
+    players: [
+      { name: 'Kieron Pollard', role: 'All-rounder', country: 'West Indies' },
+      { name: 'David Warner', role: 'Batter', country: 'Australia' },
+      { name: 'Faf du Plessis', role: 'Batter', country: 'South Africa' },
+      { name: 'Quinton de Kock', role: 'Wicket-keeper', country: 'South Africa' },
+      { name: 'Andre Russell', role: 'All-rounder', country: 'West Indies' },
+      { name: 'Sunil Narine', role: 'All-rounder', country: 'West Indies' },
+      { name: 'Nicholas Kirton', role: 'Batter', country: 'Canada' },
+      { name: 'Rashid Khan', role: 'Bowler', country: 'Afghanistan' },
+      { name: 'Mitchell Starc', role: 'Bowler', country: 'Australia' },
+      { name: 'Lockie Ferguson', role: 'Bowler', country: 'New Zealand' },
+      { name: 'Kaleem Sana', role: 'Bowler', country: 'Canada' },
+    ],
+  },
+  {
+    season: '2023',
+    finish: '4th — Semi-finalists',
+    captain: 'Kieron Pollard',
+    coach: 'Mahela Jayawardene',
+    players: [
+      { name: 'Kieron Pollard', role: 'All-rounder', country: 'West Indies' },
+      { name: 'Chris Gayle', role: 'Batter', country: 'West Indies' },
+      { name: 'Babar Azam', role: 'Batter', country: 'Pakistan' },
+      { name: 'Quinton de Kock', role: 'Wicket-keeper', country: 'South Africa' },
+      { name: 'Dwayne Bravo', role: 'All-rounder', country: 'West Indies' },
+      { name: 'Shakib Al Hasan', role: 'All-rounder', country: 'Bangladesh' },
+      { name: 'Imran Tahir', role: 'Bowler', country: 'South Africa' },
+      { name: 'Shaheen Shah Afridi', role: 'Bowler', country: 'Pakistan' },
+      { name: 'Dilon Heyliger', role: 'Bowler', country: 'Canada' },
+    ],
+  },
+]

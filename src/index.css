@@ -1,0 +1,68 @@
+@import "tailwindcss";
+
+/* Design 2 — Magazine spread.
+   Cream "paper", near-black ink, and the Canucks navy + green as the
+   magazine's spot colours. Serif display type for headlines, a text serif
+   for body copy and a condensed grotesque for labels, folios and kickers. */
+@theme {
+  --color-paper: #f6f2e9;
+  --color-paper-dark: #ece6d8;
+  --color-ink: #16181d;
+  --color-ink-soft: #4a4d55;
+  --color-rule: #cfc7b5;
+  --color-navy: #00205b;
+  --color-navy-600: #0a3178;
+  --color-green: #00843d;
+  --color-green-700: #00692f;
+
+  --font-display: "Playfair Display", "Georgia", "Times New Roman", serif;
+  --font-serif: "Source Serif 4", "Georgia", "Times New Roman", serif;
+  --font-label: "Archivo", ui-sans-serif, system-ui, "Segoe UI", Arial, sans-serif;
+}
+
+@layer base {
+  body {
+    @apply bg-paper font-serif text-ink antialiased;
+  }
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-green;
+  }
+  ::selection {
+    @apply bg-navy text-paper;
+  }
+}
+
+@layer components {
+  .sheet {
+    @apply mx-auto w-full max-w-6xl px-4 sm:px-8;
+  }
+  /* Small uppercase labels: kickers, folios, table heads */
+  .kicker {
+    @apply font-label text-[11px] font-bold uppercase tracking-[0.18em];
+  }
+  .headline {
+    @apply font-display font-black uppercase leading-[0.95] tracking-tight;
+  }
+  .deck {
+    @apply font-serif text-lg italic text-ink-soft;
+  }
+  .caption {
+    @apply mt-2 font-serif text-sm italic text-ink-soft;
+  }
+  .rule {
+    @apply border-t border-ink;
+  }
+  .rule-soft {
+    @apply border-t border-rule;
+  }
+  /* Body copy with a drop cap on the first paragraph */
+  .dropcap > p:first-child::first-letter {
+    @apply float-left mr-2 mt-1 font-display text-[4.6rem] font-black leading-[0.8] text-navy;
+  }
+  .body-copy p {
+    @apply mb-4 text-[1.05rem] leading-relaxed;
+  }
+  .ink-link {
+    @apply underline decoration-green decoration-2 underline-offset-4 hover:text-green-700;
+  }
+}
